@@ -5,8 +5,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import com.mysql.cj.protocol.x.Ok;
-
 import br.com.api.produtos.model.ProdutoModel;
 import br.com.api.produtos.model.RespostaModel;
 import br.com.api.produtos.repository.ProdutoRepository;
@@ -50,7 +48,6 @@ public class ProdutoService {
         pr.deleteById(codigo);
         rm.setMensagem("O produto foi removido com sucesso!");
         return new ResponseEntity<RespostaModel>(rm, HttpStatus.OK);
-
 
     }
 
