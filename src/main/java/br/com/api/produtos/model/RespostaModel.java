@@ -6,7 +6,7 @@ import lombok.Data;
 
 @Component // Pode adicionar injeção de dependências
 @Data
-public class RepostaModel {
+public class RespostaModel {
 
     private String mensagem;
 
