@@ -3,7 +3,7 @@ import React from 'react';
 const Tabela = () => {
     return (
         <div>
-            <table>
+            <table className="table">
                 <thead>
                     <tr>
                         <th>#</th>
