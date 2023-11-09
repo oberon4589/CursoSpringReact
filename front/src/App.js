@@ -19,7 +19,7 @@ function App() {
     return (
         <div>
             <Formulario botao={btnCadastrar} />
-            <Tabela vetor={produtos} /> [asdasda]
+            <Tabela vetor={produtos} />
         </div>
     );
 }
