@@ -28,11 +28,36 @@ function App() {
         setObjProduto({ ...objProduto, [e.target.name]: e.target.value }); //Pega o valor do produto: codigo, nome e marca
     };
 
+    // Cadastrar produto
+    const cadastrar = () => {
+        // Definindo as caracteristicas da requisição
+        fetch('http://localhost:8080/cadastrar', {
+            method: 'post',
+            body: JSON.stringify(objProduto),
+            headers: {
+                'Content-type': 'application/json',
+                Accept: 'application/json',
+            },
+        })
+            .then((retorno) => retorno.json())
+            .then((retorno_convertido) => {
+                if (retorno_convertido.mensagem !== undefined) {
+                    alert(retorno_convertido.mensagem);
+                } else {
+                    setProdutos([...produtos, retorno_convertido]);
+                    alert('Produto cadastrado!');
+                }
+            });
+    };
+
     //Retorno
     return (
         <div>
-            <p>{JSON.stringify(objProduto)}</p>
-            <Formulario botao={btnCadastrar} eventoTeclado={aoDigitar} />
+            <Formulario
+                botao={btnCadastrar}
+                eventoTeclado={aoDigitar}
+                cadastrar={cadastrar}
+            />
             <Tabela vetor={produtos} />
         </div>
     );

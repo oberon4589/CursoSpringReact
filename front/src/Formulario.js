@@ -1,20 +1,20 @@
 import React from 'react';
 
-const Formulario = ({ botao, eventoTeclado }) => {
+const Formulario = ({ botao, eventoTeclado, cadastrar }) => {
     return (
         <div>
             <form>
                 <input
                     type="text"
                     onChange={eventoTeclado}
-                    name="Nome"
+                    name="nome"
                     placeholder="Nome"
                     className="form-control"
                 />
                 <input
                     type="text"
                     onChange={eventoTeclado}
-                    name="Marca"
+                    name="marca"
                     placeholder="Marca"
                     className="form-control"
                 />
@@ -23,6 +23,7 @@ const Formulario = ({ botao, eventoTeclado }) => {
                     <input
                         type="button"
                         value="Cadastrar"
+                        onClick={cadastrar}
                         className="btn btn-primary"
                     />
                 ) : (
