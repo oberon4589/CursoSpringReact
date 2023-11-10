@@ -1,6 +1,13 @@
 import React from 'react';
 
-const Formulario = ({ botao, eventoTeclado, cadastrar, obj, cancelar }) => {
+const Formulario = ({
+    botao,
+    eventoTeclado,
+    cadastrar,
+    obj,
+    cancelar,
+    remover,
+}) => {
     return (
         <div>
             <form>
@@ -38,6 +45,7 @@ const Formulario = ({ botao, eventoTeclado, cadastrar, obj, cancelar }) => {
                         <input
                             type="button"
                             value="Remover"
+                            onClick={remover}
                             className="btn btn-danger"
                         />
                         <input
