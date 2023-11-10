@@ -7,6 +7,7 @@ const Formulario = ({
     obj,
     cancelar,
     remover,
+    alterar,
 }) => {
     return (
         <div>
@@ -40,6 +41,7 @@ const Formulario = ({
                         <input
                             type="button"
                             value="Alterar"
+                            onClick={alterar}
                             className="btn btn-warning"
                         />
                         <input
