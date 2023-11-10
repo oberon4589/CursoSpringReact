@@ -46,8 +46,14 @@ function App() {
                 } else {
                     setProdutos([...produtos, retorno_convertido]);
                     alert('Produto cadastrado!');
+                    limparFormulario();
                 }
             });
+    };
+
+    // Limpar formulário
+    const limparFormulario = () => {
+        setObjProduto(produto);
     };
 
     //Retorno
@@ -57,6 +63,7 @@ function App() {
                 botao={btnCadastrar}
                 eventoTeclado={aoDigitar}
                 cadastrar={cadastrar}
+                obj={objProduto}
             />
             <Tabela vetor={produtos} />
         </div>
