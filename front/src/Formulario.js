@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Formulario = ({ botao, eventoTeclado, cadastrar, obj }) => {
+const Formulario = ({ botao, eventoTeclado, cadastrar, obj, cancelar }) => {
     return (
         <div>
             <form>
@@ -43,6 +43,7 @@ const Formulario = ({ botao, eventoTeclado, cadastrar, obj }) => {
                         <input
                             type="button"
                             value="Cancelar"
+                            onClick={cancelar}
                             className="btn btn-secondary"
                         />
                     </div>
